@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-
 import 'form.dart';
 
 class MyProfile extends StatefulWidget {
@@ -14,12 +13,14 @@ class MyProfile extends StatefulWidget {
 
 class _MyProfileState extends State<MyProfile> {
   bool isPassword = true;
+  
   @override
   Widget build(BuildContext context) {
     final url = "https://cdn.pixabay.com/photo/2016/07/18/10/16/model-1525629_1280.jpg";
+    final title =Text("Mon Profile");
     return Scaffold(
       appBar: AppBar(
-         title: const Text("Mon Profile"),
+         title: title,
          leading: IconButton(onPressed: null , 
          icon: Icon(
           Icons.arrow_back,
@@ -31,8 +32,7 @@ class _MyProfileState extends State<MyProfile> {
                      icon: Icon(
           Icons.settings,
           color: Colors.white,
-         ),
-            
+         ),            
             onPressed: null,)
          ],
         ) ,
