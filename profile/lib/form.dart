@@ -6,9 +6,10 @@ Widget monformulaire(String labelText, String placeholder, bool isPassword ){
   return Padding(
     padding: EdgeInsets.only(bottom: 30),
     child: TextField(
-      style: TextStyle(fontSize: 30),
+      style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold,),
       obscureText: isPassword ? isPassword : false,
       decoration: InputDecoration(
+        prefixIcon: Icon(Icons.person),
         suffixIcon: isPassword ? 
         IconButton(
           icon: Icon(Icons.remove_red_eye, color: Colors.grey,),          
