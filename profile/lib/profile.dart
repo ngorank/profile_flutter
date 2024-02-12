@@ -3,6 +3,8 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
+import 'form.dart';
+
 class MyProfile extends StatefulWidget {
   const MyProfile({super.key});
 
@@ -133,38 +135,6 @@ body: Container(
 
       );
   }
-Widget monformulaire(String labelText, String placeholder, bool isPassword ){
-  return Padding(
-    padding: EdgeInsets.only(bottom: 30),
-    child: TextField(
-      obscureText: isPassword ? isPassword : false,
-      decoration: InputDecoration(
-        suffixIcon: isPassword ? 
-        IconButton(
-          icon: Icon(Icons.remove_red_eye, color: Colors.grey,),          
-          onPressed: (){
-            setState(() {
-              isPassword = !isPassword ;
-            });
-          },
-          ): null,
-          contentPadding: EdgeInsets.only(bottom: 5,),
-          labelText: labelText,
-          floatingLabelBehavior: FloatingLabelBehavior.always,
-          hintText: placeholder, 
-          hintStyle: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: Colors.grey,
-
-
-          )
-      ),
-    ),
-
-  );
-
-}
 
 
 }
