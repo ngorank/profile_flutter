@@ -20,10 +20,14 @@ Widget monformulaire(String labelText, String placeholder, bool isPassword ){
           floatingLabelBehavior: FloatingLabelBehavior.always,
           hintText: placeholder, 
           hintStyle: TextStyle(
-            fontSize: 20,
+            fontSize: 15,
             fontWeight: FontWeight.bold,
             color: Colors.grey,
-          )
+          ),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(15))
+            //borderRadius: BorderRadius.only(topLeft: Radius.circular(20))
+          ),
       ),
     ),
 
